@@ -1,0 +1,34 @@
+version: '3.4'
+
+services:
+  postgresql_ws_qf:
+    container_name: postgresql_wikijs
+    restart: always
+    image: postgres:15
+    ports:
+      - "24532:5432"
+    volumes:
+      - pg-qf-data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: su
+      POSTGRES_PASSWORD: Achiness_Duration_Ludicrous_Shakily_Powdering_Volatile_Grief_Safehouse_Uncombed
+      POSTGRES_DB: postgres
+    networks:
+      tm.network:
+      tm.internal:
+        ipv4_address: "172.32.14.245"
+        aliases:
+          - postgresql_ws_qf
+
+volumes:
+  pg-qf-data:
+
+networks:
+  tm.internal:
+    internal: true
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.32.14.0/24
+  tm.network:

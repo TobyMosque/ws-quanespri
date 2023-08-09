@@ -1,0 +1,17 @@
+{
+  "private": true,
+  "workspaces": [
+    "frontend",
+    "backend",
+    "domain"
+  ],
+  "scripts": {
+    "backend:start:dev": "yarn workspace backend start:dev",
+    "backend:build:dev": "yarn workspace backend build:dev",
+    "frontend:dev": "yarn workspace frontend quasar dev -m ssr",
+    "dev": "concurrently \"yarn backend:build:dev\" \"yarn frontend:dev\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  }
+}

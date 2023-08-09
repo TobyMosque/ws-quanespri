@@ -1,0 +1,11 @@
+[submodule "frontend"]
+path = frontend
+url = https://github.com/TobyMosque/ws-quanespri-frontend.git
+
+[submodule "backend"]
+path = backend
+url = https://github.com/TobyMosque/ws-quanespri-backend.git
+
+[submodule "domain"]
+path = domain
+url = https://github.com/TobyMosque/ws-quanespri-domain.git
